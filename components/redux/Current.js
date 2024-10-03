@@ -29,19 +29,19 @@ const Current = () => {
     ]
 
     return (
-        <ScrollView scrollEnabled>
-            <View style={styles.container}>
-                <Header />
 
+        <View style={styles.container}>
+            <Header />
+            <ScrollView scrollEnabled>
                 {
                     products.map((item) => <Product item={item} key={item.id} />
 
                     )
                 }
+            </ScrollView>
 
+        </View>
 
-            </View>
-        </ScrollView>
     )
 }
 
@@ -49,6 +49,6 @@ export default Current
 
 const styles = StyleSheet.create({
     container: {
-
+        flex: 1
     }
 })
